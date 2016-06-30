@@ -10,6 +10,6 @@ EXPOSE 8080
 
 RUN chmod -R go+rwx /var/lib/nginx
 
-USER 1001
+USER 999
 
 CMD [ "/usr/sbin/nginx" ]
