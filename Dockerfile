@@ -13,7 +13,3 @@ RUN chmod -R go+rwx /var/lib/nginx
 USER 1001
 
 CMD [ "/usr/sbin/nginx" ]
-
-RUN yum clean all && \
-    yum -y install epel-release && \
-    yum -y install rsync
