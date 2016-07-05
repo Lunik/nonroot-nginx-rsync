@@ -11,7 +11,7 @@ RUN yum -y install epel-release && \
 ADD nginx.conf /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
-ADD php.ini /etc/php5/fpm/php.ini
+ADD php-fpm.conf /etc/php-fpm.conf
 
 RUN /usr/sbin/php-fpm &
 #RUN systemctl start php-fpm
