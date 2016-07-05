@@ -13,7 +13,7 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 ADD php.ini /etc/php5/fpm/php.ini
 
-#RUN /usr/sbin/php-fpm &
+RUN /usr/sbin/php-fpm &
 #RUN systemctl start php-fpm
 
 EXPOSE 8080
@@ -22,4 +22,4 @@ RUN chmod -R go+rwx /var/lib/nginx
 
 USER 999
 
-CMD [ "/usr/sbin/nginx" , "&&", "/usr/sbin/php-fpm"]
+CMD [ "/usr/sbin/nginx"]
