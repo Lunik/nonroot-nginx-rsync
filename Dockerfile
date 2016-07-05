@@ -13,6 +13,8 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 ADD php.ini /etc/php5/fpm/php.ini
 
+RUN systemctl start php5-fpm.service
+
 EXPOSE 8080
 
 RUN chmod -R go+rwx /var/lib/nginx
